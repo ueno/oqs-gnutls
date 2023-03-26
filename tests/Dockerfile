@@ -17,6 +17,6 @@ RUN git clone -b wip/dueno/dilithium-test https://gitlab.com/dueno/gnutls.git &&
     ./bootstrap --skip-po && \
     ./configure --disable-doc --enable-pqc --prefix=/install \
 	          CFLAGS="-I/install/include" \
-	          LDFLAGS="-L/install/lib64 -Wl,-rpath,/install/lib64" &&
-    make -j$(nproc) &&
+	          LDFLAGS="-L/install/lib64 -Wl,-rpath,/install/lib64" && \
+    make -j$(nproc) && \
     sudo make install
