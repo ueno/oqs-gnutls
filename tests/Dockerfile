@@ -2,7 +2,7 @@ FROM fedora:latest
 
 RUN dnf -y install 'dnf-command(builddep)' && \
     dnf -y builddep gnutls && \
-    dnf -y install ninja-build cmake automake autoconf bison gperf libtool
+    dnf -y install ninja-build cmake automake autoconf bison gperf libtool patch
 
 RUN mkdir /install
 RUN git clone https://github.com/open-quantum-safe/liboqs.git && \
